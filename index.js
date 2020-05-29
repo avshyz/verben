@@ -48,24 +48,24 @@ if (alfy.input.length > 2) {
 
   const stem = sterilize($("#grundform").text());
   const description = sterilize($("#stammformen").text());
+  const defParagraph = $("p > span[lang='en']");
+
   if (stem && description) {
     alfy.output([
-      entry(
-        stem,
-        description,
-        `${BASE_URL}/conjugation?w=${replaceUmlauts(alfy.input)}`
-      ),
+      {
+        title: description,
+        subtitle: defParagraph ? sterilize(defParagraph.text()) : stem,
+        arg: `${BASE_URL}/conjugation?w=${replaceUmlauts(alfy.input)}`,
+      },
     ]);
   } else {
     const messages = [];
     $("a.vSuchWrt").each(function (i, elem) {
-      messages.push(
-        entry(
-          sterilize($(this).find(".rRechts+span").text()),
-          sterilize($(this).find("br+span").text()),
-          BASE_URL + $(this).attr("href")
-        )
-      );
+      messages.push({
+        title: sterilize($(this).find(".rRechts+span").text()),
+        subtitle: sterilize($(this).find("br+span").text()),
+        arg: BASE_URL + $(this).attr("href"),
+      });
     });
     if (messages.length > 0) {
       alfy.output(messages);
