@@ -56,6 +56,7 @@ if (alfy.input.length > 2) {
         subtitle: def.length > 0 ? `${stem} → ${description}` : description,
         arg: [
           `${stem} → ${description}`,
+          def,
           `${BASE_URL}/conjugation?w=${replaceUmlauts(alfy.input)}`,
         ].join(ARG_DELIM),
       },
@@ -68,9 +69,11 @@ if (alfy.input.length > 2) {
       messages.push({
         title,
         subtitle,
-        arg: [`${title} → ${subtitle}`, BASE_URL + $(this).attr("href")].join(
-          ARG_DELIM
-        ),
+        arg: [
+          `${title} → ${subtitle}`,
+          "",
+          BASE_URL + $(this).attr("href"),
+        ].join(ARG_DELIM),
       });
     });
     if (messages.length > 0) {
