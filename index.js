@@ -1,7 +1,7 @@
 const alfy = require("alfy");
 const cheerio = require("cheerio");
 
-const BASE_URL = "https://www.verbformen.com/";
+const BASE_URL = "https://www.verbformen.com/conjugation/";
 const ARG_DELIM = "~";
 
 function replaceUmlauts(foo) {
@@ -24,25 +24,14 @@ function status(title) {
   ]);
 }
 
-function entry(stem, form, link) {
-  return {
-    title: stem,
-    subtitle: form,
-    arg: [`${stem}: ${form}`, link].join(ARG_DELIM),
-  };
-}
-
 function sterilize(s) {
   return s.replace(/\s+/gi, " ");
 }
 
 if (alfy.input.length > 2) {
-  const data = await alfy.fetch(
-    `${BASE_URL}/?w=${replaceUmlauts(alfy.input)}`,
-    {
-      json: false,
-    }
-  );
+  const data = await alfy.fetch(`${BASE_URL}?w=${replaceUmlauts(alfy.input)}`, {
+    json: false,
+  });
 
   const $ = cheerio.load(data);
 
@@ -53,9 +42,9 @@ if (alfy.input.length > 2) {
   if (stem && description) {
     alfy.output([
       {
-        title: description,
-        subtitle: defParagraph ? sterilize(defParagraph.text()) : stem,
-        arg: `${BASE_URL}/conjugation?w=${replaceUmlauts(alfy.input)}`,
+        title: defParagraph ? sterilize(defParagraph.text()) : stem,
+        subtitle: description,
+        arg: `${BASE_URL}conjugation?w=${replaceUmlauts(alfy.input)}`,
       },
     ]);
   } else {
