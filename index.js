@@ -30,6 +30,9 @@ function sterilize(s) {
       .replace(/[\s]+/gi, " ")
       // Delete superscript strings
       .replace(/\p{No}/gu, "")
+      // This part appears in the definition.
+      // this is the simplest solution to clean them
+      .replace("» ", "")
       .trim()
   );
 }
@@ -46,8 +49,13 @@ if (alfy.input.length > 2) {
 
   const stem = sterilize($("#grundform").text());
   const description = sterilize($("#stammformen").text());
+
   const defParagraph = $("p > span[lang='en']");
   const def = defParagraph !== null ? sterilize(defParagraph.text()) : null;
+
+  const sentenceParagraph = $("#stammformen~.rAufZu .rLst");
+  const sentence =
+    sentenceParagraph !== null ? sterilize(sentenceParagraph.text()) : null;
 
   if (stem && description) {
     alfy.output([
@@ -58,6 +66,7 @@ if (alfy.input.length > 2) {
           `${stem} → ${description}`,
           def,
           `${BASE_URL}/conjugation?w=${replaceUmlauts(alfy.input)}`,
+          sentence,
         ].join(ARG_DELIM),
       },
     ]);
@@ -73,6 +82,7 @@ if (alfy.input.length > 2) {
           `${title} → ${subtitle}`,
           "",
           BASE_URL + $(this).attr("href"),
+          "",
         ].join(ARG_DELIM),
       });
     });
