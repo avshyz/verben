@@ -9,6 +9,7 @@
   "author": "Avishay Zarad",
   "license": "ISC",
   "dependencies": {
-    "alfy": "^0.9.1"
+    "alfy": "^0.9.1",
+    "cheerio": "^1.0.0-rc.3"
   }
 }
