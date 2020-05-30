@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>verben.awesome.cool</string>
+	<key>connections</key>
+	<dict>
+		<key>9E67375B-20DC-4B6D-BCA4-51DC689D268B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>93920F5E-9055-46FB-BEFF-F56F725D69B3</string>
+				<key>modifiers</key>
+				<integer>1179648</integer>
+				<key>modifiersubtext</key>
+				<string>Copy without stem</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F30E8F87-BCB4-45E9-A8F1-34AD5BE31453</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy to clipboard</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D9A0CDBA-3F0B-402A-87E6-2F129EFEB379</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>FE6F8D05-7225-4A97-97A4-4E2FBCD63C4E</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Create an anki card</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D9A0CDBA-3F0B-402A-87E6-2F129EFEB379</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>77160EBB-346C-40AF-8643-872C4333D9D9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F30E8F87-BCB4-45E9-A8F1-34AD5BE31453</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B6859AC2-D5B5-4CED-B499-55880B007AD3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FE6F8D05-7225-4A97-97A4-4E2FBCD63C4E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3917C2D7-6393-4356-A51E-E2F3394FF661</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Avishay Zarad</string>
+	<key>description</key>
+	<string>German Conjugator</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Verben</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query | cut -d~ -f1 | cut -d→ -f2 | awk '{$1=$1;print}' | pbcopy</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>93920F5E-9055-46FB-BEFF-F56F725D69B3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{var:split1}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B6859AC2-D5B5-4CED-B499-55880B007AD3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>~</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>F30E8F87-BCB4-45E9-A8F1-34AD5BE31453</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>verben</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>loading...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Conjugate verbs</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9E67375B-20DC-4B6D-BCA4-51DC689D268B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{var:split3}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>77160EBB-346C-40AF-8643-872C4333D9D9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>~</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>D9A0CDBA-3F0B-402A-87E6-2F129EFEB379</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string># coding: utf-8
+import sys
+from googletrans import Translator
+
+BLANK = "FILL ME NOW"
+
+[verb, meaning, _, example] = sys.argv[1].split('~')
+[stem, form] = verb.split('→')
+
+import requests
+
+normalized_stem = stem.replace('·', '')
+r = requests.post('http://127.0.0.1:8765', json={
+    "action": "addNote",
+    "version": 6,
+    "params": {
+        "note": {
+            "deckName": "Default",
+            "modelName": "German Full (B&amp;R)",
+            "fields": {
+                "Verbformen": form,
+                "DE": normalized_stem,
+			   "EN": meaning or Translator().translate("zu " + normalized_stem).text or BLANK,
+			   "Satz1_DE": example or "FILL ME",
+			   "Satz1_EN": Translator().translate(example).text if example else BLANK
+            },
+            "tags": [
+                "automatic"
+            ],
+        }
+    }
+})
+
+print(r.json())</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3917C2D7-6393-4356-A51E-E2F3394FF661</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>~</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>FE6F8D05-7225-4A97-97A4-4E2FBCD63C4E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>3917C2D7-6393-4356-A51E-E2F3394FF661</key>
+		<dict>
+			<key>xpos</key>
+			<integer>475</integer>
+			<key>ypos</key>
+			<integer>390</integer>
+		</dict>
+		<key>77160EBB-346C-40AF-8643-872C4333D9D9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>93920F5E-9055-46FB-BEFF-F56F725D69B3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>395</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>9E67375B-20DC-4B6D-BCA4-51DC689D268B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>200</integer>
+			<key>ypos</key>
+			<integer>185</integer>
+		</dict>
+		<key>B6859AC2-D5B5-4CED-B499-55880B007AD3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>D9A0CDBA-3F0B-402A-87E6-2F129EFEB379</key>
+		<dict>
+			<key>xpos</key>
+			<integer>415</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+		<key>F30E8F87-BCB4-45E9-A8F1-34AD5BE31453</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+		<key>FE6F8D05-7225-4A97-97A4-4E2FBCD63C4E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>420</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.0.6</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
