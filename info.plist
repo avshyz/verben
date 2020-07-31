@@ -324,58 +324,58 @@ print(r.json())</string>
 		<key>3917C2D7-6393-4356-A51E-E2F3394FF661</key>
 		<dict>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>695</integer>
 			<key>ypos</key>
-			<integer>390</integer>
+			<integer>455</integer>
 		</dict>
 		<key>77160EBB-346C-40AF-8643-872C4333D9D9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<integer>710</integer>
 			<key>ypos</key>
-			<integer>260</integer>
+			<integer>325</integer>
 		</dict>
 		<key>93920F5E-9055-46FB-BEFF-F56F725D69B3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>395</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>75</integer>
 		</dict>
 		<key>9E67375B-20DC-4B6D-BCA4-51DC689D268B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>330</integer>
 			<key>ypos</key>
-			<integer>185</integer>
+			<integer>265</integer>
 		</dict>
 		<key>B6859AC2-D5B5-4CED-B499-55880B007AD3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<integer>710</integer>
 			<key>ypos</key>
-			<integer>130</integer>
+			<integer>195</integer>
 		</dict>
 		<key>D9A0CDBA-3F0B-402A-87E6-2F129EFEB379</key>
 		<dict>
 			<key>xpos</key>
-			<integer>415</integer>
+			<integer>635</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>355</integer>
 		</dict>
 		<key>F30E8F87-BCB4-45E9-A8F1-34AD5BE31453</key>
 		<dict>
 			<key>xpos</key>
-			<integer>410</integer>
+			<integer>620</integer>
 			<key>ypos</key>
-			<integer>160</integer>
+			<integer>235</integer>
 		</dict>
 		<key>FE6F8D05-7225-4A97-97A4-4E2FBCD63C4E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>485</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>

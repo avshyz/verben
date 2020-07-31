@@ -62,6 +62,7 @@ if (alfy.input.length > 2) {
       {
         title: def.length > 0 ? def : stem,
         subtitle: def.length > 0 ? `${stem} → ${description}` : description,
+        quicklookurl: `${BASE_URL}/conjugation?w=${replaceUmlauts(alfy.input)}`,
         arg: [
           `${stem} → ${description}`,
           def,
@@ -78,6 +79,7 @@ if (alfy.input.length > 2) {
       messages.push({
         title,
         subtitle,
+        quicklookurl: `${BASE_URL}/conjugation?w=${replaceUmlauts(alfy.input)}`,
         arg: [
           `${title} → ${subtitle}`,
           "",
